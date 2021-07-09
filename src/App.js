@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+
+import { useState } from 'react';
+import { Mydiv } from './Components/Css/Toggle';
+import WeatherCard from './Components/WeatherCard';
+
+
 
 function App() {
+  const [toggle, settoggle] = useState(false)
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Mydiv primary={toggle}>
+      <div className='flexContainer'>
+      <button onClick={e=>{settoggle(!toggle)}}>Change mode</button>
+      <WeatherCard/>
+      </div>
+    </Mydiv>
   );
 }
 

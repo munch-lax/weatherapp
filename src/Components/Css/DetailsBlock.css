@@ -1,0 +1,38 @@
+.item{
+    display: flex;
+    float: left;
+    margin-right: 10px;
+    color: white !important;
+    width: 100px;
+   
+    
+}
+
+.detailsContainer{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    
+    
+    
+
+}
+
+@media screen and (max-width:768px){
+    
+    .item{
+      font-size: 12px;
+      width: 70px;
+    }
+
+  }
+
+  @media screen and (max-width:380px){
+    
+    .item{
+      font-size: 10px;
+      width: 50px;
+    }
+    
+  }
